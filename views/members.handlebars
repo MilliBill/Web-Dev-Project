@@ -1,13 +1,19 @@
 <div>
   <h1>Members</h1>
-  <p>Here is a list of all the members of the Kirby Club</p>
+  <p>Here is a list of our most involved members of the Kirby Club. If you want
+    to see what events we have worked on click on our names</p>
+
 </div>
 
-<div>
-  <h1>{{username}}</h1>
-  <p>{{fname}}</p>
-  <p>{{lname}}</p>
-  <p>{{joined-date}}</p>
-  <p>{{phone}}</p>
-  <p>{{email}}</p>
-</div>
+<body>
+  <ul>
+    {{#each members}}
+      <li>{{this.username}}
+        -
+        {{this.fname}}
+        {{this.lname}}
+        -
+        {{this.email}}</li>
+    {{/each}}
+  </ul>
+</body>

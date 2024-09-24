@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(255, 187, 239);
   background-image: url(/img/kirby-retro.jpg);
@@ -11,14 +17,15 @@ body {
 }
 
 #header {
-  margin-left: 5px;
+  margin-top: 10vh;
+  margin-left: 40px;
 }
 
 h1 {
   font-family: "Nerko One", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 52px;
+  font-size: 64px;
   color: rgb(0, 0, 0);
   width: 400px;
   padding: 20px;
@@ -27,6 +34,13 @@ h1 {
 p {
   width: 400px;
   padding: 0 0 20 20;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 nav ul {
@@ -43,6 +57,7 @@ nav ul li {
   margin-right: 50px;
   list-style: none;
 }
+
 a {
   color: rgb(0, 0, 0);
   list-style: none;
@@ -58,6 +73,44 @@ a:hover {
   font-size: 28px;
 }
 
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn {
+  background-color: rgb(105, 213, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Nerko One", cursive;
+}
+
+.signup-btn {
+  background-color: rgb(253, 86, 225);
+  color: white;
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: aliceblue;
+  color: hotpink;
+  border-color: hotpink;
+}
+
 .become-btn {
   padding: 10px;
   font-size: 24px;
@@ -71,4 +124,59 @@ a:hover {
 
 .become-btn:hover {
   background-color: aliceblue;
+}
+
+.form:hover {
+  transform: translateX(-0.5em) translateY(-0.5em);
+  border: 1px solid #171717;
+  box-shadow: 10px 10px 0px #666666;
+}
+
+.heading {
+  color: black;
+  padding-bottom: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  outline: none;
+  padding: 0.7em;
+  transition: 0.4s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+}
+
+.input:focus {
+  background: #ffffff;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form .btn {
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.form .btn:hover {
+  box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+  transform: translateX(-0.5em) translateY(-0.5em);
+}
+
+.form .btn:active {
+  transition: 0.2s;
+  transform: translateX(0em) translateY(0em);
+  box-shadow: none;
 }
