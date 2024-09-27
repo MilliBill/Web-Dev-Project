@@ -126,6 +126,14 @@ a:hover {
   background-color: aliceblue;
 }
 
+.member-button {
+  font-family: "Nerko One", cursive;
+  background-color: hotpink;
+  border: none;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
 .form:hover {
   transform: translateX(-0.5em) translateY(-0.5em);
   border: 1px solid #171717;
