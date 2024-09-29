@@ -31,10 +31,17 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
 
-        <div class="auth-button">
-          <a href="/login" class="login-btn">Log in</a>
-          <a href="/signup" class="signup-btn">Sign up</a>
-        </div>
+        {{#if session.isLoggedIn}}
+          <li id="menulogin">Hi,
+            {{session.name}}
+            -
+            <a href="/logout" class="login-btn">Log out</a></li>
+        {{else}}
+          <div class="auth-button">
+            <a href="/login" class="login-btn">Log in</a>
+            <a href="/signup" class="signup-btn">Sign up</a>
+          </div>
+        {{/if}}
 
       </nav>
     </header>
