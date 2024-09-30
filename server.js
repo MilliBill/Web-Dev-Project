@@ -224,7 +224,7 @@ function initTableEvents(mydb) {
 
         events.forEach((oneEvent) => {
           db.run(
-            "INSERT OR REPLACE INTO events (event_number, event, date, time, dress_code) VALUES (?, ?, ?, ?, ?)",
+            "INSERT OR REPLACE INTO events (event_number, event, date, time, dress_code, username TEXT, FOREIGN KEY (username) REFERENCES members(username)) VALUES (?, ?, ?, ?, ?)",
             [
               oneEvent.event_number,
               oneEvent.event,
